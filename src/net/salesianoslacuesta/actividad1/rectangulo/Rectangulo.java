@@ -30,4 +30,16 @@ public class Rectangulo implements CalculoBidimencional {
     public void setAltura(double altura) {
         this.altura = altura;
     }
+
+    @Override
+
+    public double calcularArea() {
+        return base * altura;
+    }
+
+    @Override
+
+    public double calcularPerimetro() {
+        return 2 * (base + altura);
+    }
 }
