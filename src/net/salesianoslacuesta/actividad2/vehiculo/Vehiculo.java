@@ -14,4 +14,48 @@ public abstract class Vehiculo {
         this.modelo = modelo;
         this.matricula = matricula;
     }
+
+    // Getters
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getNumeroPuertas() {
+        return numeroPuertas;
+    }
+
+    public int numeroRuedas() {
+        return numeroRuedas;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    // Setters
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setNumeroPuertas(int numeroPuertas) {
+        this.numeroPuertas = numeroPuertas;
+    }
+
+    public void setNumeroRuedas(int numeroRuedas) {
+        this.numeroRuedas = numeroRuedas;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
 }
