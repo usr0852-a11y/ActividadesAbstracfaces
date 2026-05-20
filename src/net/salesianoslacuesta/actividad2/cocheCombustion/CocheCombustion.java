@@ -10,4 +10,24 @@ public class CocheCombustion extends Vehiculo {
         this.listrosCombustible = listrosCombustible;
         this.motorEncendido = false;
      }
+
+     // Getters
+
+     public boolean getMotorEncendido() {
+        return motorEncendido;
+     }
+
+     public double getLitrosCombustible() {
+        return listrosCombustible;
+     }
+
+     // Setters
+
+     public void setMotorEncendido(boolean motorEncendido) {
+        this.motorEncendido = motorEncendido;
+     }
+
+     public void setLitrosCombustible(double listrosCombustible) {
+        this.listrosCombustible = listrosCombustible;
+     }
 }
