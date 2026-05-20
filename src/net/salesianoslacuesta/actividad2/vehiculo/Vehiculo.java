@@ -58,4 +58,8 @@ public abstract class Vehiculo {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+
+    public abstract void arrancar();
+    public abstract void pararMotor();
+    public abstract void mover();    
 }
