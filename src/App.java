@@ -5,7 +5,7 @@ import net.salesianoslacuesta.actividad2.cocheCombustion.CocheCombustion;
 import net.salesianoslacuesta.actividad2.vehiculo.Vehiculo;
 
 import java.util.Scanner;
-import java.util.scanner;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -49,13 +49,65 @@ public class App {
                 System.out.println("Perímetro: " + circulo.calcularPerimetro());
 
                 break;
+
+            case 2:
+                scanner.nextLine(); // Para no mezclarlo con la actividad 1
+
+                System.out.println("Crear un coche de combustión: ");
+
+                System.out.println("Color: ");
+                String color = scanner.nextLine();
+
+                System.out.println("Modelo: ");
+                String modelo = scanner.nextLine();
+
+                System.out.println("Matrícula: ");
+                String matricula = scanner.nextLine();
+
+                System.out.println("Número de puertas: ");
+                int puertas = scanner.nextInt();
+
+                System.out.println("Número de ruedas: ");
+                int ruedas = scanner.nextInt();
+
+                int litros = 20;
+
+                CocheCombustion cocheCombustion = new CocheCombustion(color, puertas, ruedas, modelo, matricula, litros);
+                System.out.println("Intentando mover el coche sin arrancar...");
+                cocheCombustion.mover();
+
+                System.out.println("Arrancando motor...");
+                cocheCombustion.arrancar();
+
+                System.out.println("Moviendo el coche varias veces...");
+                cocheCombustion.mover();
+                cocheCombustion.mover();
+                cocheCombustion.mover();
+
+                System.out.println("Combustible restante: " + cocheCombustion.getLitrosCombustible());
+
+                System.out.println("Estableciendo combustible en 2 litros...");
+                cocheCombustion.setLitrosCombustible(2);
+
+                System.out.println("Moviendo el coche tres veces más...");
+                cocheCombustion.mover();
+                cocheCombustion.mover();
+                cocheCombustion.mover();
+
+                break;
+
+            case 3:
+                System.out.println("Saliendo del programa...");
+                break;
         
             default:
-                break;
+                System.out.println("Opción no válida");
         }
 
-    }
+    } while (opcion != 3);
+
+        scanner.close();
     }
 
-    scanner.close();
+   
 }
